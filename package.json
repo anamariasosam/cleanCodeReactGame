@@ -43,10 +43,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --win --mac --em.main=build/electron.js",
-    "electron-release": "build --em.main=build/electron.js --publish=always",
-    "preelectron-pack": "yarn build",
-    "preelectron-release": "yarn build"
+    "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "pack": "build --win --mac --em.main=build/electron.js",
+    "release": "build --em.main=build/electron.js --publish=always",
+    "prepack": "yarn build",
+    "prerelease": "yarn build"
   }
 }
