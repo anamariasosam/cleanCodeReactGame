@@ -1,15 +1,46 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow, Menu } = require('electron')
+const path = require('path')
+const isDev = require('electron-is-dev')
+const notifier = require('node-notifier')
+const { autoUpdater } = require('electron-updater')
 
-const path = require('path');
-const url = require('url');
-const isDev = require('electron-is-dev');
-const notifier = require('node-notifier');
+let mainWindow
 
-let mainWindow;
+function showUpdateNotification(it) {
+  it = it || {}
+  const restartNowAction = 'Restart now'
 
-const autoUpdater = require('electron-updater').autoUpdater;
+  const versionLabel = it.label ? `Version ${it.version}` : 'The latest version'
+
+  notifier.notify(
+    {
+      title: 'A new update is ready to install.',
+      message: `${versionLabel} has been downloaded and will be automatically installed after restart.`,
+      closeLabel: 'Okay',
+      actions: restartNowAction,
+    },
+    (err, response, metadata) => {
+      if (err) throw err
+      if (metadata.activationValue !== restartNowAction) {
+        return
+      }
+      autoUpdater.quitAndInstall()
+    }
+  )
+}
+
+function initAutoUpdate() {
+  if (isDev) {
+    return
+  }
+
+  if (process.platform === 'linux') {
+    return
+  }
+
+  autoUpdater.checkForUpdates()
+  autoUpdater.signals.updateDownloaded(showUpdateNotification)
+}
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -17,64 +48,51 @@ function createWindow() {
     height: 680,
     transparent: false,
     resizable: false,
-    frame: false,
-    icon: '/assets/icons/icon.png',
-  });
-  mainWindow.loadURL(
-    isDev
-      ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '../build/index.html')}`
-  );
-  mainWindow.on('closed', () => (mainWindow = null));
-  initAutoUpdate();
+    icon: '/assets/icons/64x64.png',
+  })
+  mainWindow.loadURL(isDev
+    ? 'http://localhost:3000'
+    : `file://${path.join(__dirname, '../build/index.html')}`)
+  mainWindow.on('closed', () => { (mainWindow = null) })
+  initAutoUpdate()
 }
 
-function initAutoUpdate() {
-  if (isDev) {
-    return;
-  }
-
-  if (process.platform === 'linux') {
-    return;
-  }
-
-  autoUpdater.checkForUpdates();
-  autoUpdater.signals.updateDownloaded(showUpdateNotification);
-}
-
-function showUpdateNotification(it) {
-  it = it || {};
-  const restartNowAction = 'Restart now';
-
-  const versionLabel = it.label ? `Version ${it.version}` : 'The latest version';
-
-  notifier.notify(
-    {
-      title: 'A new update is ready to install.',
-      message: `${versionLabel} has been downloaded and will be automatically installed after restart.`,
-      closeLabel: 'Okay',
-      actions: restartNowAction
-    },
-    function(err, response, metadata) {
-      if (err) throw err;
-      if (metadata.activationValue !== restartNowAction) {
-        return;
-      }
-      autoUpdater.quitAndInstall();
-    }
-  );
-}
-
-app.on('ready', createWindow);
+app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit();
+    app.quit()
   }
-});
+})
 
 app.on('activate', () => {
   if (mainWindow === null) {
-    createWindow();
+    createWindow()
   }
-});
+})
+
+
+let menu = new Menu()
+
+const template = []
+
+if (process.platform === 'darwin') {
+  const name = app.getName()
+  template.unshift({
+    label: name,
+    submenu: [
+      {
+        label: `About ${name}`,
+        role: 'about',
+      },
+      {
+        label: 'Quit',
+        accelerator: 'Command+Q',
+        click: () => { app.quit() },
+      },
+    ],
+  })
+}
+
+menu = Menu.buildFromTemplate(template)
+Menu.setApplicationMenu(menu)
