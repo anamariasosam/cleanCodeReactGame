@@ -44,11 +44,13 @@ function initAutoUpdate() {
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 680,
-    transparent: false,
+    width: 850,
+    height: 700,
+    minWidth: 850,
+    minHeight: 700,
     resizable: false,
-    icon: '/assets/icons/64x64.png',
+    // titleBarStyle: 'hidden',
+    icon: path.join(__dirname, '../build/icons/icon.icns'),
   })
   mainWindow.loadURL(isDev
     ? 'http://localhost:3000'
@@ -72,27 +74,27 @@ app.on('activate', () => {
 })
 
 
-let menu = new Menu()
-
-const template = []
-
-if (process.platform === 'darwin') {
-  const name = app.getName()
-  template.unshift({
-    label: name,
-    submenu: [
-      {
-        label: `About ${name}`,
-        role: 'about',
-      },
-      {
-        label: 'Quit',
-        accelerator: 'Command+Q',
-        click: () => { app.quit() },
-      },
-    ],
-  })
-}
-
-menu = Menu.buildFromTemplate(template)
-Menu.setApplicationMenu(menu)
+// let menu = new Menu()
+//
+// const template = []
+//
+// if (process.platform === 'darwin') {
+//   const name = app.getName()
+//   template.unshift({
+//     label: name,
+//     submenu: [
+//       {
+//         label: `About ${name}`,
+//         role: 'about',
+//       },
+//       {
+//         label: 'Quit',
+//         accelerator: 'Command+Q',
+//         click: () => { app.quit() },
+//       },
+//     ],
+//   })
+// }
+//
+// menu = Menu.buildFromTemplate(template)
+// Menu.setApplicationMenu(menu)

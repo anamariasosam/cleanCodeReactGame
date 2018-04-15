@@ -1,5 +1,6 @@
 import React from 'react'
-import './CoffeMachine.css'
+import PropTypes from 'prop-types'
+import '../styles/CoffeMachine.css'
 
 const CoffeMachine = ({ active }) => (
   <div>
@@ -28,23 +29,7 @@ const CoffeMachine = ({ active }) => (
             <div className="right-shadow"></div>
             <div className="coffee"></div>
           </div>
-          <div className="dispenser dispenser-right">
-            <div className="handle"></div>
-            <div className="spout">
-              <div className="left-light"></div>
-              <div className="right-shadow"></div>
-            </div>
-            <div className="left-light"></div>
-            <div className="right-shadow"></div>
-            <div className="coffee"></div>
-          </div>
           <div className="coffee-cup coffee-cup-left">
-            <div className="left-light"></div>
-            <div className="right-shadow"></div>
-            <div className="steam-left"></div>
-            <div className="steam-right"></div>
-          </div>
-          <div className="coffee-cup coffee-cup-right">
             <div className="left-light"></div>
             <div className="right-shadow"></div>
             <div className="steam-left"></div>
@@ -60,5 +45,9 @@ const CoffeMachine = ({ active }) => (
     </div>
   </div>
 )
+
+CoffeMachine.propTypes = {
+  active: PropTypes.bool,
+}
 
 export default CoffeMachine

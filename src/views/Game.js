@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import CoffeMachine from './components/CoffeMachine'
+import CoffeMachine from '../components/CoffeMachine'
 
 class Game extends Component {
   constructor() {
     super()
 
     this.state = {
-      answerCorrect: false,
+      answerCorrect: true,
     }
 
     this.pourCoffee = this.pourCoffee.bind(this)

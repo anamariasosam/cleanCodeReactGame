@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+
+  background-color: #fff;
+
+  font-family: sans-serif;
+}
+
+.btn {
+  display: block;
+
+  width: 30%;
+  margin: 0 auto;
+	padding: 18px 35px;
+
+	cursor: pointer;
+  text-decoration: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+	color: #fff;
+	border-radius: 3px;
+	background: #00d9a9;
+
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.btn:hover {
+  background: #64ef9c;
+}
