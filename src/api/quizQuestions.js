@@ -8,7 +8,7 @@ const quizQuestions = [
     correctAnswer: 'Verdadero',
   },
   {
-    question: 'Ana es muy brava?',
+    question: '¿Ana es muy brava?',
     answerOptions: [
       'Verdadero',
       'Falso',

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
@@ -39,6 +40,12 @@ const Result = ({ correctAnswers }) => {
         Nivel de cafeína: {correctAnswers}
       </h2>
       {coffees()}
+      <Link
+        to='/'
+        className="btn result--button"
+      >
+        Volver al inicio
+      </Link>
     </ReactCSSTransitionGroup>
   )
 }

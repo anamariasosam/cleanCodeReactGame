@@ -25,6 +25,12 @@
   margin: 10px 20px;
 }
 
+.result--button {
+  position: absolute;
+  bottom: 40px;
+  left: 35%;
+}
+
 
 /* Quiz Component */
 .answerOptions {
