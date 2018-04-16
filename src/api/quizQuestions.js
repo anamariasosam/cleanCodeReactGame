@@ -1,19 +1,35 @@
 const quizQuestions = [
   {
-    question: '¿Mateo es muy bravo?',
+    question: '¿Cuál opción eliges?',
     answerOptions: [
-      'Verdadero',
-      'Falso',
+      'var areaTriangulo',
+      'var a',
     ],
-    correctAnswer: 'Verdadero',
+    correctAnswer: 1,
   },
   {
-    question: '¿Ana es muy brava?',
+    question: '¿Cuál opción eliges para nombrar la descripción de una clase llamada miembro?',
     answerOptions: [
-      'Verdadero',
-      'Falso',
+      'm_description',
+      'description',
     ],
-    correctAnswer: 'Falso',
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Cómo nombrarías una variable para agrupar usuarios?',
+    answerOptions: [
+      'users',
+      'usersList',
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: '¿Cómo nombrarías un método para saber la edad?',
+    answerOptions: [
+      'obtenerEdad',
+      'edadUsuario',
+    ],
+    correctAnswer: 1,
   },
 ]
 

@@ -47,15 +47,19 @@ class Game extends Component {
   }
 
   validateAnswerSelected(answerSelected) {
-    if (answerSelected === this.state.correctAnswer) {
+    const correctAnswer = this.state.answerOptions[this.state.correctAnswer - 1]
+
+    if (answerSelected === correctAnswer) {
       const correctAnswersCount = this.state.correctAnswersCount + 1
 
       this.setState({
         correctAnswersCount,
         isAnswerCorrect: true,
       })
+      
       return true
     }
+    return false
   }
 
   setUserAnswer(answer) {
