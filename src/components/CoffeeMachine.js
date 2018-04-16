@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../styles/CoffeMachine.css'
+import '../styles/CoffeeMachine.css'
 
-const CoffeMachine = ({ active }) => (
+const CoffeeMachine = ({ active }) => (
   <div>
     <div className="box">
       <div className={`machine ${active && 'active'}`}>
@@ -46,8 +46,8 @@ const CoffeMachine = ({ active }) => (
   </div>
 )
 
-CoffeMachine.propTypes = {
+CoffeeMachine.propTypes = {
   active: PropTypes.bool,
 }
 
-export default CoffeMachine
+export default CoffeeMachine

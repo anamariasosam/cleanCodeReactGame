@@ -13,6 +13,7 @@
     "node-notifier": "^5.1.2",
     "prop-types": "^15.6.1",
     "react": "15.5.4",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "15.5.4",
     "react-router-dom": "^4.2.2"
   },
@@ -37,11 +38,11 @@
       "node_modules/**/*",
       "package.json"
     ],
-    "win":{
+    "win": {
       "icon": "build/icons/icon.png",
       "publisherName": "anamariasosam"
     },
-    "mac":{
+    "mac": {
       "icon": "build/icons/icon.icns"
     },
     "directories": {

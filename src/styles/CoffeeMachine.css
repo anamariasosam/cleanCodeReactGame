@@ -322,7 +322,7 @@
 }
 
 .machine.active .indicator {
-	animation: heatUp 5.3s ease 1 forwards;
+	animation: heatUp 3.3s ease 1 forwards;
 }
 
 .machine.active .steam-left, .machine.active .steam-right {
@@ -330,7 +330,7 @@
 }
 
 .machine.active .coffee {
-	animation: pourCoffee 5s linear 1 forwards;
+	animation: pourCoffee 3s linear 1 forwards;
 }
 
 /* --- KEYFRAMES --- */

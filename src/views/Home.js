@@ -1,9 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const Home = () => (
-  <div>
+  <ReactCSSTransitionGroup
+    className="home__container"
+    component="div"
+    transitionName="fade"
+    transitionEnterTimeout={800}
+    transitionLeaveTimeout={500}
+    transitionAppear
+    transitionAppearTimeout={500}
+  >
     <img
       src={'assets/images/programmer.gif'}
       alt='programmer'
@@ -15,6 +23,6 @@ const Home = () => (
     >
       Darle cafeína
     </Link>
-  </div>
+  </ReactCSSTransitionGroup>
 )
 export default Home
