@@ -16,7 +16,7 @@ class Game extends Component {
       answer: '',
       correctAnswer: '',
       correctAnswersCount: 0,
-      answerIsCorrect: false,
+      isAnswerCorrect: false,
       gameEnd: false,
     }
 
@@ -52,7 +52,7 @@ class Game extends Component {
 
       this.setState({
         correctAnswersCount,
-        answerIsCorrect: true,
+        isAnswerCorrect: true,
       })
       return true
     }
@@ -75,15 +75,15 @@ class Game extends Component {
       answerOptions: quizQuestions[counter].answerOptions,
       correctAnswer: quizQuestions[counter].correctAnswer,
       answer: '',
-      answerIsCorrect: false,
+      isAnswerCorrect: false,
     })
   }
 
   renderQuiz() {
     return (
-      <div>
+      <div className="quiz--container">
         <CoffeeMachine
-          active={this.state.answerIsCorrect}
+          active={this.state.isAnswerCorrect}
         />
         <Quiz
           answer={this.state.answer}

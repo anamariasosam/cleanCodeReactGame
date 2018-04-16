@@ -2,14 +2,13 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  background: #ccc;
+  background: #FF2F8B;
   border-radius: 3px;
+  color: #fff;
 }
 
-@media (min-width: 769px) {
-  .container {
-    margin: 2.5rem auto;
-  }
+.quiz--container, .container {
+  margin-top: -25px;
 }
 
 /* Result Component */
@@ -52,7 +51,7 @@
 }
 
 .answerOption:hover {
-  background-color: #eefbfe;
+  background-color: #FFA4CA;
 }
 
 .radioCustomButton {

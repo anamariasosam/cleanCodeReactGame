@@ -45,11 +45,11 @@ function initAutoUpdate() {
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 850,
-    height: 700,
+    height: 750,
     minWidth: 850,
     minHeight: 700,
     resizable: false,
-    // titleBarStyle: 'hidden',
+    titleBarStyle: 'hidden',
     icon: path.join(__dirname, '../build/icons/icon.icns'),
   })
   mainWindow.loadURL(isDev

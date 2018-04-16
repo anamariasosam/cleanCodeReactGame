@@ -89,8 +89,8 @@
 	height: 10%;
 	width: 5%;
 	background: pink;
-	right: 10%;
-	top: 11%;
+	right: 12%;
+	top: 10%;
 	z-index: 8;
 	background: #BA6A4D;
 	border: solid 6px #18464b;
@@ -106,7 +106,7 @@
 	border: solid 6px #18464b;
 	border-radius: 0 0 20px 20px;
 	z-index: 8;
-	top: 30%;
+	top: 29%;
 	left: 20%;
 }
 
@@ -118,7 +118,7 @@
 	border: solid 6px #18464b;
 	z-index: 6;
 	left: 25%;
-	top: 36%;
+	top: 33%;
 }
 
 .dispenser {
@@ -145,7 +145,7 @@
 .dispenser .handle {
 	position: absolute;
 	width: 100%;
-	height: 20%;
+	height: 50%;
 	background: #BA6A4D;
 	border: solid 6px #18464b;
 	z-index: 10;
@@ -170,9 +170,9 @@
 
 .spout {
 	position: absolute;
-	width: 60%;
-	left: 13%;
-	height: 10%;
+	width: 75%;
+	left: 12%;
+	height: 50%;
 	top: 100%;
 	background: pink;
 	background: #DDDDDD;
@@ -184,10 +184,10 @@
 .spout::after {
 	content: "";
 	position: absolute;
-	width: 40%;
+	width: 42%;
 	height: 100%;
 	top: 100%;
-	left: 16%;
+	left: 10%;
 	background: #DDDDDD;
 	border: solid 6px #18464b;
 	border-radius: 0 0 5px 5px;
@@ -196,7 +196,7 @@
 
 .coffee-cup {
 	position: absolute;
-	left: 39%;
+	left: 38.5%;
 	width: 20%;
 	height: 35%;
 	bottom: -3%;
@@ -270,7 +270,7 @@
 	position: absolute;
 	width: 70%;
 	height: 15%;
-	bottom: 5%;
+	bottom: 12%;
 	left: 15%;
 	background: #008AAE;
 	border: solid 6px #18464b;
@@ -294,7 +294,7 @@
 	position: absolute;
 	width: 100%;
 	height: 0;
-	bottom: 5%;
+	bottom: 12%;
 	left: 0;
 	background: #00B7E7;
 	border-bottom: solid 6px #18464b;
@@ -306,7 +306,7 @@
 .coffee {
 	width: 22%;
 	position: absolute;
-	left: 42%;
+	left: 40%;
 	background: #5C3325;
 	top: 100%;
 	bottom: 0%;
@@ -318,11 +318,11 @@
 /* --- ANIMATION -- */
 
 .machine.active .button {
-	right: 11%;
+	right: 13%;
 }
 
 .machine.active .indicator {
-	animation: heatUp 3.3s ease 1 forwards;
+	animation: heatUp 13.3s ease 1 forwards;
 }
 
 .machine.active .steam-left, .machine.active .steam-right {
@@ -330,7 +330,7 @@
 }
 
 .machine.active .coffee {
-	animation: pourCoffee 3s linear 1 forwards;
+	animation: pourCoffee 13s linear 1 forwards;
 }
 
 /* --- KEYFRAMES --- */
@@ -390,7 +390,7 @@
 
 	6%, 94% {
 		top: 100%;
-		bottom: -200%;
+		bottom: -300%;
 	}
 
 	100% {

@@ -35,7 +35,9 @@ const Result = ({ correctAnswers }) => {
       transitionAppear
       transitionAppearTimeout={500}
     >
-      <h2>Nivel de cafeína : {correctAnswers}</h2>
+      <h2 className="title result--title">
+        Nivel de cafeína: {correctAnswers}
+      </h2>
       {coffees()}
     </ReactCSSTransitionGroup>
   )

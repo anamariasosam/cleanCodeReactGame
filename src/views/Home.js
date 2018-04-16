@@ -12,6 +12,10 @@ const Home = () => (
     transitionAppear
     transitionAppearTimeout={500}
   >
+    <h1 className="title">
+      Clean Code Game
+    </h1>
+
     <img
       src={'assets/images/programmer.gif'}
       alt='programmer'
