@@ -25,10 +25,11 @@ class Game extends Component {
   }
 
   componentWillMount() {
+    const last = quizQuestions.length - 1
     this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: quizQuestions[0].answerOptions,
-      correctAnswer: quizQuestions[0].correctAnswer,
+      question: quizQuestions[last].question,
+      answerOptions: quizQuestions[last].answerOptions,
+      correctAnswer: quizQuestions[last].correctAnswer,
     })
   }
 
@@ -56,7 +57,7 @@ class Game extends Component {
         correctAnswersCount,
         isAnswerCorrect: true,
       })
-      
+
       return true
     }
     return false

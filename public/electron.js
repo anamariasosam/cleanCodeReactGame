@@ -44,10 +44,10 @@ function initAutoUpdate() {
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 850,
-    height: 750,
-    minWidth: 850,
-    minHeight: 700,
+    width: 950,
+    height: 800,
+    minWidth: 950,
+    minHeight: 800,
     resizable: false,
     titleBarStyle: 'hidden',
     icon: path.join(__dirname, '../build/icons/icon.icns'),
