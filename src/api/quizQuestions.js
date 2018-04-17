@@ -66,10 +66,10 @@ const quizQuestions = [
   {
     question: '¿Cuál es la mejor práctica?',
     answerOptions: [
-      'tener un método: render(boolean isSuite)',
-      'tener dos métodos: renderForSuite() y renderForSingle()',
+      'Tener un método: render(boolean isSuite)',
+      'Tener dos métodos: renderForSuite() y renderForSingle()',
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
   },
   {
     question: 'Revisa el siguiente link: goo.gl/Wd3nVi',
@@ -80,15 +80,7 @@ const quizQuestions = [
     correctAnswer: 2,
   },
   {
-    question: '¿Cuál',
-    answerOptions: [
-      'public boolean set(String attribute, String value)',
-      "if (attributeExists('username')) { setAttribute('username', 'unclebob') }",
-    ],
-    correctAnswer: 1,
-  },
-  {
-    question: '¿Cuál es mejor?',
+    question: '¿Cuál es la mejor práctica?',
     answerOptions: [
       'if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))',
       'if (employee.isEligibleForFullBenefits())',
@@ -102,6 +94,70 @@ const quizQuestions = [
       'Falso',
     ],
     correctAnswer: 2,
+  },
+  {
+    question: '¿Este comentario para la siguiente instruccion es necesario: " /** The day of the month. */ private int dayOfMonth "; ?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Este comentario para la siguiente instruccion es necesario: " while a  != null) {…} //while "; ?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Piensa usted que es necesario hacer comentarios cada que se haga una edición en el codigo?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Que hacemos cuando el codigo esta hecho un desastre y no se entiende?',
+    answerOptions: [
+      'Limpiarlo y organizarlo',
+      'Comentarlo',
+    ],
+    correctAnswer: 1,
+  },
+  {
+    question: '¿Es bueno tener más de 3 parametros en una función?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Es buena practica tener un proceso no visible dentro de una función?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Es necesario escribir un comentario con el nombre de quien hizo la edición?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 2,
+  },
+  {
+    question: '¿Este comentario esta bien hecho assertTrue(a.compareTo(a) == 0); // a == a?',
+    answerOptions: [
+      'Si',
+      'No',
+    ],
+    correctAnswer: 1,
   },
 ]
 

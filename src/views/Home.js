@@ -17,7 +17,7 @@ const Home = () => (
     </h1>
 
     <img
-      src={'assets/images/programmer.gif'}
+      src={'assets/images/home.gif'}
       alt='programmer'
     />
 

@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn {
@@ -25,14 +25,14 @@ body {
 
 	color: #fff;
 	border-radius: 3px;
-	background: #4CAF50;
+	background: #fe8d7f;
 
 	font-size: 13px;
 	font-weight: 700;
 }
 
 .btn:hover {
-  background: #64ef9c;
+  background: #ff9d91;
 }
 
 .home__container {

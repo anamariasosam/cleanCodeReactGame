@@ -15,7 +15,7 @@
 	top: 5%;
 	left: 15%;
 	background: #008AAE;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 12px 12px 40px 40px;
 	overflow: hidden;
 	z-index: 10;
@@ -46,7 +46,7 @@
 	left: 44%;
 	top: 25%;
 	border-radius: 50%;
-	background: #18464b;
+	background: #21357A;
 }
 
 .dial-inner {
@@ -65,7 +65,7 @@
 	position: absolute;
 	width: 20%;
 	height: 20%;
-	background: #18464b;
+	background: #21357A;
 	border-radius: 50%;
 	left: 40%;
 	top: 40%;
@@ -76,7 +76,7 @@
 .indicator::after {
 	content: "";
 	position: absolute;
-	background: #18464b;
+	background: #21357A;
 	height: 180%;
 	width: 50%;
 	border-radius: 50px;
@@ -93,7 +93,7 @@
 	top: 10%;
 	z-index: 8;
 	background: #BA6A4D;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 12px;
 	transition: all ease 0.3s;
 }
@@ -103,7 +103,7 @@
 	width: 60%;
 	height: 5%;
 	background: #DDDDDD;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 0 0 20px 20px;
 	z-index: 8;
 	top: 29%;
@@ -115,7 +115,7 @@
 	width: 50%;
 	height: 41%;
 	background: #00B7E7;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	z-index: 6;
 	left: 25%;
 	top: 33%;
@@ -127,7 +127,7 @@
 	width: 20%;
 	height: 25%;
 	background: #DDDDDD;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 0 0 20px 20px;
 }
 
@@ -138,7 +138,7 @@
 	left: 0;
 	width: 100%;
 	height: 15%;
-	border-bottom: solid 6px #18464b;
+	border-bottom: solid 5px #21357A;
 	background: #009CC4;
 }
 
@@ -147,7 +147,7 @@
 	width: 100%;
 	height: 50%;
 	background: #BA6A4D;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	z-index: 10;
 	right: 100%;
 	top: 20%;
@@ -176,7 +176,7 @@
 	top: 100%;
 	background: pink;
 	background: #DDDDDD;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 0 0 5px 5px;
 	z-index: 10;
 }
@@ -187,9 +187,9 @@
 	width: 42%;
 	height: 100%;
 	top: 100%;
-	left: 10%;
+	left: 13%;
 	background: #DDDDDD;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 0 0 5px 5px;
 	z-index: 10;
 }
@@ -200,8 +200,8 @@
 	width: 20%;
 	height: 35%;
 	bottom: -3%;
-	background: #FF2F8B;
-	border: solid 6px #18464b;
+	background: #FF8276;
+	border: solid 5px #21357A;
 	border-radius: 10px 10px 20px 20px;
 	z-index: 10;
 }
@@ -213,8 +213,7 @@
 	height: 20%;
 	top: 0;
 	left: 0;
-	background: #FFA4CA;
-	border-bottom: solid 6px #18464b;
+	background: #FFAFA7;
 }
 
 .coffee-cup::after {
@@ -224,7 +223,7 @@
 	width: 20%;
 	height: 45%;
 	top: 20%;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 0 10px 10px 0;
 }
 
@@ -273,7 +272,7 @@
 	bottom: 12%;
 	left: 15%;
 	background: #008AAE;
-	border: solid 6px #18464b;
+	border: solid 5px #21357A;
 	border-radius: 12px 12px 0px 0px;
 	overflow: hidden;
 	z-index: 10;
@@ -287,7 +286,7 @@
 	top: 0;
 	left: 0;
 	background: #DDDDDD;
-	border-bottom: solid 6px #18464b;
+	border-bottom: solid 5px #21357A;
 }
 
 .counter {
@@ -297,7 +296,7 @@
 	bottom: 12%;
 	left: 0;
 	background: #00B7E7;
-	border-bottom: solid 6px #18464b;
+	border-bottom: solid 5px #21357A;
 	border-radius: 50px;
 	overflow: hidden;
 	z-index: 10;
@@ -306,7 +305,7 @@
 .coffee {
 	width: 22%;
 	position: absolute;
-	left: 39.5%;
+	left: 38.5%;
 	background: #5C3325;
 	top: 100%;
 	bottom: 0%;
